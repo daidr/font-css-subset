@@ -1,0 +1,45 @@
+{
+  "name": "font-css-subset",
+  "version": "0.0.1",
+  "description": "font-css-subset",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production gulp build",
+    "dev": "cross-env NODE_ENV=dev gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daidr/font-css-subset.git"
+  },
+  "keywords": [
+    "font",
+    "subset",
+    "css"
+  ],
+  "author": "daidr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/daidr/font-css-subset/issues"
+  },
+  "homepage": "https://github.com/daidr/font-css-subset#readme",
+  "dependencies": {
+    "browser-sync": "^2.27.9",
+    "browserify": "^17.0.0",
+    "cross-env": "^7.0.3",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-copy": "^4.0.1",
+    "gulp-filter": "^7.0.0",
+    "gulp-if": "^3.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglifycss": "^1.1.0",
+    "jszip": "^3.9.1",
+    "sass": "^1.51.0",
+    "subset-font": "^1.4.0",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  }
+}

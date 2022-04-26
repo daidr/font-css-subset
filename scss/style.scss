@@ -1,0 +1,121 @@
+:root {
+  --color-extralight: #fffdfa;
+  --color-primary: #ff821c;
+  --color-light: #ffddb6;
+  --color-shadow: #ffecd0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 1450px;
+  width: 100vw;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: var(--color-extralight);
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  height: 70px;
+  margin: 10px;
+  margin-top: 0;
+  background: var(--color-light);
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px var(--color-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  padding: 0 55px;
+  color: var(--color-primary);
+  font-size: 24px;
+
+  .logo {
+    font-weight: bold;
+    line-height: 0;
+  }
+
+  .toolbar {
+    display: flex;
+    align-items: center;
+
+    a {
+      color: var(--color-primary);
+      display: block;
+      padding: 5px;
+      border-radius: 6px;
+      line-height: 0;
+      font-size: 24px;
+      transition: opacity 0.15s ease-in-out, background 0.15s ease-in-out,
+        color 0.15s ease-in-out;
+
+      &:hover {
+        color: var(--color-light);
+        background: var(--color-primary);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 485px) {
+  .header {
+    padding: 0 20px;
+  }
+}
+
+.container {
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.upload-btn {
+  margin: 10px 0;
+  font-size: 20px;
+  color: var(--color-primary);
+  background: var(--color-light);
+  border-radius: 12px;
+  padding: 10px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  box-shadow: 0px 8px 20px var(--color-shadow);
+  transition: opacity 0.15s ease-in-out;
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  &:active {
+    opacity: 0.9;
+  }
+}
+
+.alert {
+  margin: 10px 0;
+  color: var(--color-primary);
+  background: var(--color-light);
+  border-radius: 12px;
+  padding: 10px 0;
+  font-size: 20px;
+  box-shadow: 0px 8px 20px var(--color-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
