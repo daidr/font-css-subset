@@ -56,18 +56,27 @@ gulp.task('html', function () {
         .pipe(copy('./dist/'))
         .pipe(gulpif(process.env.NODE_ENV == 'dev', browserSync.reload({ stream: true })));
 });
+gulp.task('public', function () {
+    return gulp.src('./public/**/*')
+        .pipe(copy('./dist/'))
+        .pipe(gulpif(process.env.NODE_ENV == 'dev', browserSync.reload({ stream: true })));
+});
 
 gulp.task('watch', function () {
     browserSync.init({
+        port: 4000,
+        ui: {
+            port: 4001
+        },
         server: {
             baseDir: "./dist",
             index: "index.html"
         }
     });
-    gulp.series(gulp.task('clean-dist'), gulp.task('html'), gulp.task('scss'), gulp.task('js'))()
+    gulp.series(gulp.task('clean-dist'), gulp.task('html'), gulp.task('public'), gulp.task('scss'), gulp.task('js'))()
     gulp.watch('scss/**/*.scss', gulp.task('scss'));
     gulp.watch('js/entry.js', gulp.task('js'));
     gulp.watch('index.html', gulp.task('html'));
 });
 
-gulp.task('build', gulp.series(gulp.task('clean-dist'), gulp.task('html'), gulp.task('scss'), gulp.task('js')));
+gulp.task('build', gulp.series(gulp.task('clean-dist'), gulp.task('public'), gulp.task('html'), gulp.task('scss'), gulp.task('js')));
