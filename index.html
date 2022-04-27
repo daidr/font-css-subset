@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
+    <title>网页字体分片工具 | WebFontSlice</title>
     <link rel="stylesheet" href="./bundle.min.css">
 </head>
 
 <body>
     <div class="wrapper">
         <div class="header">
-            <div class="logo">中文字体分片</div>
+            <div class="logo">网页字体分片工具</div>
             <div class="toolbar">
                 <a href="https://github.com/daidr/font-css-subset" target="_blank" title="Github">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -25,8 +25,23 @@
             </div>
         </div>
         <div class="container">
-            <input type="file" class="font-input" style="display:none">
-            <div class="alert normal">请点击下面的按钮选择字体文件</div>
+            <input type="file" class="font-input" style="display:none" accept=".woff,.woff2,.otf,.ttf">
+            <div class="normal-wrapper" data-title="配置">
+                <div class="input-group">
+                    <span>字体名称：</span>
+                    <input type="text" value="Untitled" class="font-name-input">
+                </div>
+                <div class="input-group">
+                    <span>加载方式：</span>
+                    <select class="font-display-select">
+                        <option value="0">auto</option>
+                        <option value="1" selected>swap</option>
+                        <option value="2">fallback</option>
+                        <option value="3">optional</option>
+                    </select>
+                </div>
+            </div>
+            <div class="normal-wrapper alert" data-title="提示">请点击下面的按钮选择字体文件</div>
             <button class="upload-btn">选择字体</button>
         </div>
     </div>
