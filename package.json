@@ -39,7 +39,6 @@
     "gulp-uglifycss": "^1.1.0",
     "jszip": "^3.10.1",
     "sass": "^1.55.0",
-    "subset-font": "^1.6.1",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0",
     "webworkify": "^1.5.0"

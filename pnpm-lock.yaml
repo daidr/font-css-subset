@@ -18,7 +18,6 @@ specifiers:
   gulp-uglifycss: ^1.1.0
   jszip: ^3.10.1
   sass: ^1.55.0
-  subset-font: ^1.6.1
   vinyl-buffer: ^1.0.1
   vinyl-source-stream: ^2.0.0
   webworkify: ^1.5.0
@@ -41,7 +40,6 @@ dependencies:
   gulp-uglifycss: 1.1.0
   jszip: 3.10.1
   sass: 1.55.0
-  subset-font: 1.6.1
   vinyl-buffer: 1.0.1
   vinyl-source-stream: 2.0.0
   webworkify: 1.5.0
@@ -2148,10 +2146,6 @@ packages:
       glogg: 1.0.2
     dev: false
 
-  /harfbuzzjs/0.3.0:
-    resolution: {integrity: sha512-H1TIOYfrVIPrI38mivVbbh+KZQSM/UCv7GhOyTajUzKShS+2NUEZFy65eb/1WUMMSUvtOuQ/jiYXccInJ2pLVA==}
-    dev: false
-
   /has-ansi/2.0.0:
     resolution: {integrity: sha512-C8vBJ8DwUCx19vhm7urhTuUsr4/IyP6l4VzNQDv+ryHQObW3TTTp9yB68WpYgRe2bbaGuZ/se74IqFeVnMnLZg==}
     engines: {node: '>=0.10.0'}
@@ -3275,13 +3269,6 @@ packages:
       lcid: 1.0.0
     dev: false
 
-  /p-limit/3.1.0:
-    resolution: {integrity: sha512-TYOanM3wGwNGsZN2cVTYPArw454xnXj5qmWF1bEoAc4+cU/ol7GVh7odevjp1FNHduHc3KZMcFduxU5Xc6uJRQ==}
-    engines: {node: '>=10'}
-    dependencies:
-      yocto-queue: 0.1.0
-    dev: false
-
   /pako/1.0.11:
     resolution: {integrity: sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==}
     dev: false
@@ -4275,15 +4262,6 @@ packages:
       minimist: 1.2.7
     dev: false
 
-  /subset-font/1.6.1:
-    resolution: {integrity: sha512-GToW4DDsjaZzabGNb6TUqWpLyteaK8QHicVPqaVPMiXkAQ0E+Ps0f9K9rEXUHpYn4TS4ASLjz2JP7VPHnhpRJg==}
-    dependencies:
-      fontverter: 2.0.0
-      harfbuzzjs: 0.3.0
-      lodash: 4.17.21
-      p-limit: 3.1.0
-    dev: false
-
   /supports-color/2.0.0:
     resolution: {integrity: sha512-KKNVtd6pCYgPIKU4cp2733HWYCpplQhddZLBUryaAHou723x+FRzQ5Df824Fj+IyyuiQTRoub4SnIFfIcrp70g==}
     engines: {node: '>=0.8.0'}
@@ -4878,9 +4856,4 @@ packages:
       which-module: 1.0.0
       y18n: 3.2.2
       yargs-parser: 5.0.1
-    dev: false
-
-  /yocto-queue/0.1.0:
-    resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
-    engines: {node: '>=10'}
     dev: false
