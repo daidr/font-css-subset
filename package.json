@@ -25,6 +25,7 @@
     "browser-sync": "^2.27.10",
     "browserify": "^17.0.0",
     "cross-env": "^7.0.3",
+    "fontverter": "^2.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean": "^0.4.0",
@@ -36,10 +37,11 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
     "gulp-uglifycss": "^1.1.0",
-    "jszip": "^3.10.0",
-    "sass": "^1.52.1",
-    "subset-font": "^1.4.0",
+    "jszip": "^3.10.1",
+    "sass": "^1.55.0",
+    "subset-font": "^1.6.1",
     "vinyl-buffer": "^1.0.1",
-    "vinyl-source-stream": "^2.0.0"
+    "vinyl-source-stream": "^2.0.0",
+    "webworkify": "^1.5.0"
   }
 }
