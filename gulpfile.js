@@ -40,6 +40,9 @@ gulp.task('js', function () {
         debug: process.env.NODE_ENV == 'dev'
     });
 
+    b.require('./js/builtins/fs', { expose: 'fs' })
+    b.require('./js/builtins/path', { expose: 'path' })
+
     return b.bundle()
         .pipe(source('bundle.min.js'))
         .pipe(buffer())
@@ -71,11 +74,12 @@ gulp.task('watch', function () {
         server: {
             baseDir: "./dist",
             index: "index.html"
-        }
+        },
+        open: false
     });
     gulp.series(gulp.task('clean-dist'), gulp.task('html'), gulp.task('public'), gulp.task('scss'), gulp.task('js'))()
     gulp.watch('scss/**/*.scss', gulp.task('scss'));
-    gulp.watch('js/entry.js', gulp.task('js'));
+    gulp.watch('js/**/*.js', gulp.task('js'));
     gulp.watch('index.html', gulp.task('html'));
 });
 
