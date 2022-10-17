@@ -1,4 +1,4 @@
-const fontverter = require('fontverter');
+const fontverter = require('./fontConverter');
 
 let _global = {
     exports: undefined,
