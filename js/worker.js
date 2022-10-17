@@ -169,7 +169,7 @@ const fontSlicer = async (self, fontBuffer, fontDisplayType, fontName) => {
         const zipData = await zip.generateAsync({
             type: "blob",
             compression: "STORE",
-            comment: `由 网页字体分片工具(https://font.daidr.me) 生成。
+            comment: `由 中文网页字体分片工具(https://font.daidr.me) 生成。
 该字体名称为 「${fontName}」
 字体显示方式为 「${fontDisplayType}」`
         });
