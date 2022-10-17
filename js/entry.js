@@ -55,7 +55,7 @@
                 toggleUploadBtn(false)
                 break;
             case "slice":
-                setAlert(`处理第 ${extraData.slice + 1} 个字体切片(共 ${extraData.total+1} 个)...`)
+                setAlert(`处理第 ${extraData.slice + 1} 个字体切片(共 ${extraData.total} 个)...`)
                 break;
             case "success":
                 const zipUrl = URL.createObjectURL(extraData.zipData);
