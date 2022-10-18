@@ -147,7 +147,7 @@ const fontSlicer = async (self, fontBuffer, fontDisplayType, fontName) => {
         let cssFile = '';
         for (let i = 0; i < SLICE_DATA_CHARS_ARRAY.length; i++) {
             console.log(`处理分片 ${i}/${SLICE_DATA_CHARS_ARRAY.length}`)
-            self.postMessage({ status: 'slice', slice: i,total: SLICE_DATA_CHARS_ARRAY.length })
+            self.postMessage({ status: 'slice', slice: i, total: SLICE_DATA_CHARS_ARRAY.length })
             const fontUnicodeRange = SLICE_DATA_ARRAY[i]
             if (i == 119) {
                 console.log(SLICE_DATA_CHARS_ARRAY[119])
@@ -180,20 +180,20 @@ const fontSlicer = async (self, fontBuffer, fontDisplayType, fontName) => {
     }
 }
 
-// init
-{
-    (async function () {
-        try {
-            await subsetHelper.init()
-            self.postMessage({ status: 'loaded-success' })
-        } catch (e) {
-            console.log(e)
-            self.postMessage({ status: 'loaded-error' })
-        }
-    })()
-}
-
 module.exports = function (self) {
+    // init
+    {
+        (async function () {
+            try {
+                await subsetHelper.init()
+                self.postMessage({ status: 'loaded-success' })
+            } catch (e) {
+                console.log(e)
+                self.postMessage({ status: 'loaded-error' })
+            }
+        })()
+    }
+
     if (!JSZip) {
         JSZip = require("jszip");
     }
